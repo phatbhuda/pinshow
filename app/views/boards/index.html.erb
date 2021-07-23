@@ -3,7 +3,9 @@
 <ul>
   <% @boards.each do |board| %>
     <li>
-      <%= board.title %>
+      <%= link_to board.title, board %>
     </li>
   <% end %>
+<br>
+  <%= link_to "New Board", new_board_path %>
 </ul>
