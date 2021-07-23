@@ -1,7 +1,7 @@
 <h1>Slide Show</h1>
 <div>
   <% @feed.items.each do |item| %>
-    <div>Item: <%= doc = Nokogiri::HTML( item.description)
-    img_srcs = doc.css('img').map{ |i| i['src'] }.first %></div>
+    <div>Item: <img src="<%= doc = Nokogiri::HTML( item.description)
+                   img_srcs = doc.css('img').map{ |i| i['src'] }.first %>"</div>
 </div>
 <% end %>
