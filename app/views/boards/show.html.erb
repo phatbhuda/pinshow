@@ -1,0 +1,16 @@
+<h1><%= @board.title %></h1>
+
+<p><%= @board.url %></p>
+
+<ul>
+  <li><%= link_to "Slide Show", slideshow_path(@board) %></li>
+  <li><%= link_to "Edit", edit_board_path(@board) %></li>
+  <li><%= link_to "Delete", board_path(@board),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+  </li>
+</ul>
+
+<ul>
+  <li><%= link_to "Home", root_path %></li>
+</ul>
